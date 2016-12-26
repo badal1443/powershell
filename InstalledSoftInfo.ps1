@@ -1,0 +1,18 @@
+﻿# The following script is to get installed software information on a given system
+
+#region Obtaining info of an installed program
+
+Get-WmiObject -Class "Win32_Product" | Where-Object {$_.name -like "*winflash*"} | Format-Table -Property Name, Version
+
+$computers = @("SUCHITABADAL","SUCHITABADAL","SUCHITABADAL")
+
+for($i=0; $i -lt $computers.Count; $i++){
+
+echo "For computer " $computers[$i]
+
+Get-WmiObject -ComputerName $computers[$i] -Class "Win32_Product" | Where-Object {$_.name -like "*winflash*"} | Format-Table -Property Name, Version
+
+}
+
+
+#endregion

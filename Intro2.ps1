@@ -31,4 +31,6 @@ Get-Help Get-Command -Online
 # -? option can be used to get quick help, it' a short cut to use as desbribed below.
 
 Get-Command -?
+Get-WmiObject -?
+Get-Service -?
 #endregion code block 3
