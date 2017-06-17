@@ -4,7 +4,7 @@
 
 Get-WmiObject -Class "Win32_Product" | Where-Object {$_.name -like "*winflash*"} | Format-Table -Property Name, Version
 
-$computers = @("SUCHITABADAL","SUCHITABADAL","SUCHITABADAL")
+$computers = @("computer1","computer2","computer3")
 
 for($i=0; $i -lt $computers.Count; $i++){
 
